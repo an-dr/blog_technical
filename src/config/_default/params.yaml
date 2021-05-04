@@ -1,0 +1,9 @@
+disableDarkImage: true
+
+showLicenseInFooter: true
+license: "CC BY-SA 4.0"
+licenseLink: https://creativecommons.org/licenses/by-sa/4.0/
+
+author: Andrei Gramakov
+toc: true # Enable Table of Contents
+pager: true # Show pager navigation (prev/next links) at the bottom of pages if true

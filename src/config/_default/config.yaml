@@ -1,0 +1,7 @@
+baseURL: "https://blog.agramakov.me"
+languageCode: "en-us"
+title: "technical_"
+theme: "fuji"
+
+showLicense: true # Enable or disable license for all post
+showToc: true # Enable or disable ToC for all post

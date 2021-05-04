@@ -1,0 +1,41 @@
+{{ define "main" }}
+<!-- homepage range in all posts -->
+{{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+{{ range $paginator.Pages }}
+<div class="post">
+
+  <h2 class="post-item post-title">
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+  </h2>
+
+  <div class="post-container">
+    <div>
+      {{ if .Params.thumbnail }}
+        <a href="{{ .Permalink }}">
+        {{ if ( hasPrefix .Params.thumbnail "http") }}
+          <img src='{{ .Params.thumbnail }}' class="post-cover">
+        {{ else }}
+          <img src='{{ .Permalink }}/{{ .Params.thumbnail }}' class="post-cover">
+        {{ end }}
+        </a>
+      {{ end }}
+    </div>
+
+    <div>
+      <div class="post-item post-meta">
+        {{ partial "post-meta.html" . }}
+      </div>
+      <div class="post-item post-summary markdown-body">
+        {{ .Summary }}
+      </div>
+    </div>
+
+  </div>
+
+
+</div>
+{{ end }}
+
+{{- partial "pagination.html" (dict "context" . "pagi" $paginator) -}}
+
+{{ end }}
