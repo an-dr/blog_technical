@@ -1,0 +1,26 @@
+$body-font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue",
+  "Helvetica", "Arial", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN",
+  "Source Han Sans SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+$mono-font: "Cascadia Code", "SF Mono", "Fira Code", "Consolas", $body-font;
+$title-font: "Product Sans", $body-font;
+$body-font-size: 12px;
+
+$border-radius:  0px;  // for code
+
+$light-color-primary: #ffbb00;
+$light-color-secondary: #d4008d;
+$light-color-focus: #810056;
+$light-color-mute: #9ea1a3;
+$light-color-font: #c0c0c0;
+$light-color-divider: #4d5158;
+$light-color-bg: #2f3136;
+$light-color-codebg: #414449;
+
+$dark-color-primary: #5e3256;
+$dark-color-secondary: #c04f9a;
+$dark-color-focus: #d4ab3a;
+$dark-color-mute: #9ea1a3;
+$dark-color-font: #3f4551;
+$dark-color-divider: #888888;
+$dark-color-bg: #e4e2d7;
+$dark-color-codebg: #fff2d5;
