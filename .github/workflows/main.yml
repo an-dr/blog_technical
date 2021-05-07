@@ -1,0 +1,37 @@
+name: Deploy Site
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Git checkout
+        uses: actions/checkout@v2
+
+      # - name: Update theme
+      #   # (Optional)If you have the theme added as submodule, you can pull it and use the most updated version
+      #   run: git submodule update --init --recursive
+
+      - name: 🔧 Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.81.0'
+          extended: true
+
+      - name: 🧱 Build
+        run: hugo
+        working-directory: ${{ github.workspace }}/src
+
+
+      - name: 🎉 Deploy
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          server: agramakov.me
+          username: agrakwkb
+          password: ${{ secrets.ftp_password }}
+          local-dir: ${{ github.workspace }}/src/public/
+          server-dir: blog.agramakov.me/
+          dangerous-clean-slate: true
+          # dry-run: true
