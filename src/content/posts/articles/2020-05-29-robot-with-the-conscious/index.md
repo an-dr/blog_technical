@@ -2,9 +2,23 @@
 title: "Robot with the Conscious: Imitating animal behavior for reducing user's anxiety"
 date: "2020-05-29"
 categories:
-  - "robotics"
-  - "zakhar"
+  - robotics
+  - zakhar
+  - articles
 thumbnail: "images/6.gif"
+aliases:
+    - /wp/2020-05-29-robot-with-the-conscious
+    - /2020/05/29/robot-with-the-conscious
+    - /zakhar-article-1
+url: posts/2020-05-29-robot-with-the-conscious
+tags:
+  - robotics
+  - zakhar
+  - articles
+  - robot
+  - ros
+  - research
+  - emotions
 ---
 
 

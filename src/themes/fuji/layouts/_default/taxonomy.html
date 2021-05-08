@@ -1,0 +1,44 @@
+{{ define "main" }}
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="page-info">
+          <span>{{ i18n "catCurrentTag" . }}</span>
+        </div>
+        {{- range .Paginator.Pages -}}
+        <a href="{{ .RelPermalink }}" class="a-block">
+          <div class="post">
+
+            <h2 class="post-item post-title">
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </h2>
+
+            <div class="post-container">
+              <div>
+                {{ if .Params.thumbnail }}
+                  <a href="{{ .Permalink }}">
+                  {{ if ( hasPrefix .Params.thumbnail "http") }}
+                    <img src='{{ .Params.thumbnail }}' class="post-cover">
+                  {{ else }}
+                    <img src='{{ .Permalink }}/{{ .Params.thumbnail }}' class="post-cover">
+                  {{ end }}
+                  </a>
+                {{ end }}
+              </div>
+
+              <div>
+                <div class="post-item post-meta">
+                  {{ partial "post-meta.html" . }}
+                </div>
+                <div class="post-item post-summary markdown-body">
+                  {{ .Summary }}
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </a>
+        {{- end -}}
+    </div>
+</div>
+{{ end }}

@@ -6,9 +6,9 @@ categories:
 thumbnail: "ZakharLogo.png"
 ---
 
-Today I decided to represent my small robotics project. I called it Zakhar. It is not really a robot of flesh (though, sometimes I'm assembling different prototypes).  it is a research project where I develop new interesting ways in robotics architecture.
+Today I decided to present my small robotics project. I called it Zakhar. It is not really a robot of flesh (though, sometimes I'm assembling different prototypes).  it is a research project where I develop new interesting ways in robotics architecture.
 
-The project is full of abstractions and parallels with human psychology. The main aim if the project is to create a robot(s), which behaviour would be understandable and familiar to a human as an observer.
+The project is full of abstractions and parallels with human psychology. The main aim if the project is to create a robot(s), which behavior would be understandable and familiar to a human as an observer.
 
 The reason why it is interesting:
 <!--more-->
