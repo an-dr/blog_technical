@@ -2,6 +2,7 @@
 <!-- homepage range in all posts -->
 {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
 {{ range $paginator.Pages }}
+
 <div class="post">
 
   <h2 class="post-item post-title">
@@ -32,8 +33,8 @@
 
   </div>
 
-
 </div>
+
 {{ end }}
 
 {{- partial "pagination.html" (dict "context" . "pagi" $paginator) -}}

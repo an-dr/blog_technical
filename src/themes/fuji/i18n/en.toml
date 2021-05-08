@@ -46,7 +46,10 @@
     other = "Total posts: "
 
 [tagsCurrentTag]
-    other = "Posts with the tag {{ .Title }}: "
+    other = "Tag: {{ .Title }}"
+
+[catCurrentTag]
+    other = "Category: {{ .Title }}"
 
 [searchSuccess]
     other = "[NUM] results ([TIME] ms)"

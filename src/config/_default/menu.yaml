@@ -1,7 +1,7 @@
 nav:
 - identifier: main
   name: main page
-  url: /
+  url: "https://blog.agramakov.me"
   weight: -110
 
 link:
