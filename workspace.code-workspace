@@ -4,7 +4,11 @@
             "path": "."
         }
     ],
-    "settings": {},
+    "settings": {
+        "insertDateString.format": "YYYY-MM-DDThh:mm:ss+02:00",
+        "insertDateString.formatDate": "YYYY-MM-DD",
+        "insertDateString.formatTime": "hh:mm:ss",
+    },
     "tasks": {
         "version": "2.0.0",
         "tasks": [
@@ -39,6 +43,11 @@
                     "cwd": "${workspaceFolder}/src",
                 }
             },
+        ]
+    },
+    "extensions": {
+        "recommendations": [
+            "jsynowiec.vscode-insertdatestring"
         ]
     }
 }
