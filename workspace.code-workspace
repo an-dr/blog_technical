@@ -43,6 +43,17 @@
                     "cwd": "${workspaceFolder}/src",
                 }
             },
+            {
+                "label": "New post",
+                "type": "shell",
+                "command": "python",
+                "args": [
+                    "new_post.py",
+                ],
+                "options": {
+                    "cwd": "${workspaceFolder}/tools",
+                }
+            },
         ]
     },
     "extensions": {
