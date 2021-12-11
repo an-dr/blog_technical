@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>eclipse on technical_</title><link>https://blog.agramakov.me/tags/eclipse/</link><description>Recent content in eclipse on technical_</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 08 Jul 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.agramakov.me/tags/eclipse/index.xml" rel="self" type="application/rss+xml"/><item><title>Configure Visual Studio toolchain on Eclipse</title><link>https://blog.agramakov.me/posts/2018-07-08-configure-visual-studio-toolchain-on-eclipse/</link><pubDate>Sun, 08 Jul 2018 00:00:00 +0000</pubDate><guid>https://blog.agramakov.me/posts/2018-07-08-configure-visual-studio-toolchain-on-eclipse/</guid><description>1. Install software:
+Eclipse IDE for C/C++ Developers
+Visual Studio
+2. Open Eclipse -&amp;gt; Help -&amp;gt; Install New Software&amp;hellip; -&amp;gt;
+Work with: http://download.eclipse.org/tools/cdt/releases/9.4/ -&amp;gt;
+CDT Optional Features -&amp;gt; C/C++ Visual C++ Support 9.4.3.201802261533
+-&amp;gt; Next -&amp;gt; Agree -&amp;gt; Install -&amp;gt; Finish -&amp;gt; Restart
+3. Close Eclipse
+4. Open Developer Command Prompt for VS 2017 and run from it Eclipse (this trick will add all needed VS environment variables to path)</description></item></channel></rss>
