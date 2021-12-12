@@ -3,35 +3,21 @@ on:
   push:
     branches:
       - main
+      - github-pages
+      - feature/github_pages
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - name: 📥 Git checkout
         uses: actions/checkout@v2
-
-      # - name: Update theme
-      #   # (Optional)If you have the theme added as submodule, you can pull it and use the most updated version
-      #   run: git submodule update --init --recursive
-
-      - name: 🔧 Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+        
+      - name: 📰 Publish Site
+        uses: chabad360/hugo-gh-pages@master
         with:
-          hugo-version: '0.81.0'
-          extended: true
-
-      - name: 🧱 Build
-        run: hugo
-        working-directory: ${{ github.workspace }}/src
-
-
-      - name: 🎉 Deploy
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
-        with:
-          server: agramakov.me
-          username: agrakwkb
-          password: ${{ secrets.ftp_password }}
-          local-dir: ${{ github.workspace }}/src/public/
-          server-dir: blog.agramakov.me/
-          dangerous-clean-slate: true
-          # dry-run: true
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          cname: blog.agramakov.me # Or anything else
+          branch: gh-pages # Or anything else
+          args: --minify
+          siteDir: ${{ github.workspace }}/src
+          # Use this if your site isn't in the root of your repo.
