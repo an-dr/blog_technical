@@ -14,3 +14,8 @@ link:
   name: Zakhar on hackaday.io
   url: https://zakhar.agramakov.me
   weight: -110
+  
+- identifier: blog_technical@github
+  name: github.com/an-dr/blog_technical
+  url: https://github.com/an-dr/blog_technical
+  weight: -110
