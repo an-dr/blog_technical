@@ -15,7 +15,7 @@ link:
   url: https://zakhar.agramakov.me
   weight: -110
   
-- identifier: blog_technical@github
-  name: github.com/an-dr/blog_technical
+- identifier: blog_technical-at-github
+  name: blog_technical@github
   url: https://github.com/an-dr/blog_technical
   weight: -110
