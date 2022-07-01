@@ -1,8 +1,18 @@
 {
     "folders": [
         {
+            "path": "./src/content/posts/2022",
+            "name": "Posts 2022"
+        },
+        {
+            "path": "./src/content/posts",
+            "name": "Posts"
+        },
+        {
+            "name": "blog_technical",
             "path": "."
-        }
+        },
+
     ],
     "settings": {
         "insertDateString.format": "YYYY-MM-DDThh:mm:ss+02:00",
@@ -17,7 +27,7 @@
                 "type": "shell",
                 "command": "hugo",
                 "options": {
-                    "cwd": "${workspaceFolder}/src",
+                    "cwd": "${workspaceFolder:blog_technical}/src",
                 }
             },
             {
@@ -28,7 +38,7 @@
                     "serve",
                 ],
                 "options": {
-                    "cwd": "${workspaceFolder}/src",
+                    "cwd": "${workspaceFolder:blog_technical}/src",
                 }
             },
             {
@@ -40,18 +50,18 @@
                     "-D"
                 ],
                 "options": {
-                    "cwd": "${workspaceFolder}/src",
+                    "cwd": "${workspaceFolder:blog_technical}/src",
                 }
             },
             {
-                "label": "New post",
+                "label": "Create a New Post",
                 "type": "shell",
                 "command": "python",
                 "args": [
                     "new_post.py",
                 ],
                 "options": {
-                    "cwd": "${workspaceFolder}/tools",
+                    "cwd": "${workspaceFolder:blog_technical}/tools",
                 }
             },
         ]
