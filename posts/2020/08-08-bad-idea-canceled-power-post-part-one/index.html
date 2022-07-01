@@ -1,0 +1,60 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=HandheldFriendly content="True"><meta http-equiv=x-ua-compatible content="IE=edge"><meta http-equiv=cache-control content="no-transform"><meta http-equiv=cache-control content="no-siteapp"><meta name=generator content="Hugo 0.101.0"><link rel="shortcut icon" href=https://cdn.jsdelivr.net/gh/dsrkafuu/dsr-cdn@1/images/favicons/dsrca/favicon.ico><title>[Bad Idea, canceled] Power post. Part one. - technical_</title><meta name=author content="Andrei Gramakov"><meta name=keywords content="zakhar,robotics,hackaday,hardware"><meta property="og:title" content="[Bad Idea, canceled] Power post. Part one."><meta name=twitter:title content="[Bad Idea, canceled] Power post. Part one."><meta property="og:type" content="article"><meta property="og:url" content="https://blog.agramakov.me/posts/2020/08-08-bad-idea-canceled-power-post-part-one/"><meta property="og:description" content="There are a lot of issues when you connect low- and high-current devices to the same electrical circuit. Basically, you are getting:
+Noise at sensors&rsquo; output
+Freezes and resets of MCUs
+Artefacts on LCD and backlight&rsquo;s flashing
+Other unexpected issues
+That&rsquo;s really annoying that&rsquo;s why I spend last several weeks thinking how to implement power supply for Zakhar. There are two things I want from this update: to avoid things mentioned above and to simplify development allowing me to work with every platform separately."><meta name=twitter:description content="There are a lot of issues when you connect low- and high-current devices to the same electrical circuit. Basically, you are getting:
+Noise at sensors&rsquo; output
+Freezes and resets of MCUs
+Artefacts on LCD and backlight&rsquo;s flashing
+Other unexpected issues
+That&rsquo;s really annoying that&rsquo;s why I spend last several weeks thinking how to implement power supply for Zakhar. There are two things I want from this update: to avoid things mentioned above and to simplify development allowing me to work with every platform separately."><meta name=twitter:card content="summary"><meta property="article:published_time" content="2020-08-08T15:14:00+02:00"><meta property="article:modified_time" content="2020-08-08T15:14:00+02:00"><link rel=stylesheet href=https://blog.agramakov.me/assets/css/fuji.min.css></head><body data-theme=auto><script data-cfasync=false>var fujiThemeData=localStorage.getItem("fuji_data-theme");fujiThemeData?fujiThemeData!=="auto"&&document.body.setAttribute("data-theme",fujiThemeData==="dark"?"dark":"light"):localStorage.setItem("fuji_data-theme","auto")</script><header><div class="container-lg clearfix"><div class="col-12 header"><a class=title-main href=https://blog.agramakov.me>technical_</a></div></div></header><main><div class="container-lg clearfix"><div class="col-12 col-md-9 float-left content"><article><h2 class="post-item post-title"><a href=https://blog.agramakov.me/posts/2020/08-08-bad-idea-canceled-power-post-part-one/>[Bad Idea, canceled] Power post. Part one.</a></h2><div class="post-item post-meta"><span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-08-08</span>
+<span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href=/tags/zakhar>zakhar</a>&nbsp;<a href=/tags/robotics>robotics</a>&nbsp;<a href=/tags/hackaday>hackaday</a>&nbsp;<a href=/tags/hardware>hardware</a>&nbsp;</span></div><div class="post-content markdown-body"><p><img class=img-zoomable src=5120251596899760195.png alt></p><p>There are a lot of issues when you connect low- and high-current devices to the same electrical circuit. Basically, you are getting:</p><ul><li><p>Noise at sensors&rsquo; output</p></li><li><p>Freezes and resets of MCUs</p></li><li><p>Artefacts on LCD and backlight&rsquo;s flashing</p></li><li><p>Other unexpected issues</p></li></ul><p>That&rsquo;s really annoying that&rsquo;s why I spend last several weeks thinking how to implement power supply for Zakhar. There are two things I want from this update: to avoid things mentioned above and to simplify development allowing me to work with every platform separately. There is also thing that I don&rsquo;t want, to develop a reliable power system. Please get me right, it is cool and interesting, but it is not something new. So, what I want is:</p><ul><li><p>Use as many ready-to-use components</p></li><li><p>Make an isolated power supply system for each platform</p></li></ul><p>Sounds like power banks!</p><p>I&rsquo;ve been already using a cool power bank with two low- and high-current ports for motors and the rest electronics:</p><p><img class=img-zoomable src=8165941596898390849.jpg alt>
+I will use it for the moving platform only.</p><p>One months ago, I&rsquo;ve already added another one for the computing platform with a Raspberry:</p><p><img class=img-zoomable src=4828081596898493713.jpg alt>
+Since the face module and the sensor platform haven&rsquo;t been separated almost never during the development, I decided to add to them only single common power bank. Unfortunately, I haven&rsquo;t found anything, so I had to make own one:</p><p><img class=img-zoomable src=9793171596898834447.jpg alt>
+(I know, LEGO AGAIN!)</p><p>Okey. Now I must charge 3 power banks. Easy! Since we are not interested of using four pins of inter-platform connectors for power delivery anymore it&rsquo;s time to update the connectors for delivery of charge to power banks.</p><p>Again, to not spending the time for development of physical connectors, let&rsquo;s use best practices.</p><ol><li>Take breadboards:</li></ol><p><img class=img-zoomable src=3939441596899318766.jpg alt>
+2. Think a little</p><p><img class=img-zoomable src=5444821596899369366.png alt>
+3. Cut!</p><p><img class=img-zoomable src=2719511596899494609.jpg alt>
+And here what and how we can connect:</p><p><img class=img-zoomable src=184951596899577714.png alt>
+As a result, two platforms connected look like:</p><p><img class=img-zoomable src=5555441596899880139.jpg alt>
+And no more blinking of LCD backlight while the Raspberry is thinking, or motors are turning!</p><p>I&rsquo;m waiting a bunch of cables and switchers so next time I&rsquo;ll show the final variant of Zakhar&rsquo;s power supply solution and we, having a stable and plug-and-play set of flatform will continue to investigate the life behavior and how to implement it for the robot!</p><p>Stay tuned!</p><p>P.S If you have any better solutions let me know!</p></div></article></div><aside class="col-12 col-md-3 float-left sidebar"><div class="sidebar-item sidebar-pages"><h3>Pages</h3><ul><li><a href=https://blog.agramakov.me>main page</a></li></ul></div><div class="sidebar-item sidebar-links"><h3>Links</h3><ul><li><a href=https://agramakov.me target=_blank><span>About me</span></a></li><li><a href=https://github.com/an-dr/blog_technical target=_blank><span>blog_technical@github</span></a></li><li><a href=https://zakhar.agramakov.me target=_blank><span>Zakhar on hackaday.io</span></a></li></ul></div><div class="sidebar-item sidebar-tags"><h3>Categories</h3><div><li><a href=https://blog.agramakov.me/categories/articles>articles</a></li><li><a href=https://blog.agramakov.me/categories/codding>codding</a></li><li><a href=https://blog.agramakov.me/categories/linux>linux</a></li><li><a href=https://blog.agramakov.me/categories/opencv>opencv</a></li><li><a href=https://blog.agramakov.me/categories/raspberry>raspberry</a></li><li><a href=https://blog.agramakov.me/categories/robotics>robotics</a></li><li><a href=https://blog.agramakov.me/categories/ros>ros</a></li><li><a href=https://blog.agramakov.me/categories/virtualization>virtualization</a></li><li><a href=https://blog.agramakov.me/categories/zakhar>zakhar</a></li></div></div><div class="sidebar-item sidebar-tags"><h3>Tags</h3><div><span><a href=/tags/articles/>articles</a></span>
+<span><a href=/tags/build/>build</a></span>
+<span><a href=/tags/cpp/>cpp</a></span>
+<span><a href=/tags/eclipse/>eclipse</a></span>
+<span><a href=/tags/emotions/>emotions</a></span>
+<span><a href=/tags/hackaday/>hackaday</a></span>
+<span><a href=/tags/hardware/>hardware</a></span>
+<span><a href=/tags/howto/>howto</a></span>
+<span><a href=/tags/mechanics/>mechanics</a></span>
+<span><a href=/tags/opencv/>opencv</a></span>
+<span><a href=/tags/raspberry/>raspberry</a></span>
+<span><a href=/tags/research/>research</a></span>
+<span><a href=/tags/robot/>robot</a></span>
+<span><a href=/tags/robotics/>robotics</a></span>
+<span><a href=/tags/ros/>ros</a></span>
+<span><a href=/tags/uart/>uart</a></span>
+<span><a href=/tags/visualstudio/>visualstudio</a></span>
+<span><a href=/tags/zakhar/>zakhar</a></span></div></div><div class="sidebar-item sidebar-toc"><h3>Table of Contents</h3><nav id=TableOfContents></nav></div></aside></div><div class=btn><div class=btn-menu id=btn-menu><i class="iconfont icon-grid-sharp"></i></div><div class=btn-toggle-mode><i class="iconfont icon-contrast-sharp"></i></div><div class=btn-scroll-top><i class="iconfont icon-chevron-up-circle-sharp"></i></div></div><aside class=sidebar-mobile style=display:none><div class=sidebar-wrapper><div class="sidebar-item sidebar-pages"><h3>Pages</h3><ul><li><a href=https://blog.agramakov.me>main page</a></li></ul></div><div class="sidebar-item sidebar-links"><h3>Links</h3><ul><li><a href=https://agramakov.me target=_blank><span>About me</span></a></li><li><a href=https://github.com/an-dr/blog_technical target=_blank><span>blog_technical@github</span></a></li><li><a href=https://zakhar.agramakov.me target=_blank><span>Zakhar on hackaday.io</span></a></li></ul></div><div class="sidebar-item sidebar-tags"><h3>Tags</h3><div><span><a href=/tags/articles/>articles</a></span>
+<span><a href=/tags/build/>build</a></span>
+<span><a href=/tags/cpp/>cpp</a></span>
+<span><a href=/tags/eclipse/>eclipse</a></span>
+<span><a href=/tags/emotions/>emotions</a></span>
+<span><a href=/tags/hackaday/>hackaday</a></span>
+<span><a href=/tags/hardware/>hardware</a></span>
+<span><a href=/tags/howto/>howto</a></span>
+<span><a href=/tags/mechanics/>mechanics</a></span>
+<span><a href=/tags/opencv/>opencv</a></span>
+<span><a href=/tags/raspberry/>raspberry</a></span>
+<span><a href=/tags/research/>research</a></span>
+<span><a href=/tags/robot/>robot</a></span>
+<span><a href=/tags/robotics/>robotics</a></span>
+<span><a href=/tags/ros/>ros</a></span>
+<span><a href=/tags/uart/>uart</a></span>
+<span><a href=/tags/visualstudio/>visualstudio</a></span>
+<span><a href=/tags/zakhar/>zakhar</a></span></div></div></div></aside></main><footer><div class="container-lg clearfix"><div class="col-12 footer"><p>Unless otherwise noted, the content of this site is licensed under <a rel=license href=https://creativecommons.org/licenses/by-sa/4.0/ target=_blank>CC BY-SA 4.0</a>.</p><span>&copy; 2022
+<a href=https://blog.agramakov.me>Andrei Gramakov</a>
+| Powered by <a href=https://github.com/dsrkafuu/hugo-theme-fuji/ target=_blank>Fuji-v2</a> & <a href=https://gohugo.io/ target=_blank>Hugo</a></span></div></div></footer><script defer src=https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js></script>
+<script defer src=https://cdn.jsdelivr.net/npm/lazysizes@5.3.0/lazysizes.min.js></script>
+<script defer src=https://cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-core.min.js></script>
+<script defer src=https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js></script>
+<script defer src=/assets/js/fuji.min.js></script></body></html>
