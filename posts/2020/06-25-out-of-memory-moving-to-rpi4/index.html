@@ -3,14 +3,18 @@ Just received Raspberry Pi 4 B with 4 GB of RAM and finally I can continue imple
 Just received Raspberry Pi 4 B with 4 GB of RAM and finally I can continue implementation of this structure. Stay tuned!"><meta name=twitter:card content="summary"><meta property="article:published_time" content="2020-06-25T17:59:00+02:00"><meta property="article:modified_time" content="2020-06-25T17:59:00+02:00"><link rel=stylesheet href=https://blog.agramakov.me/assets/css/fuji.min.css></head><body data-theme=auto><script data-cfasync=false>var fujiThemeData=localStorage.getItem("fuji_data-theme");fujiThemeData?fujiThemeData!=="auto"&&document.body.setAttribute("data-theme",fujiThemeData==="dark"?"dark":"light"):localStorage.setItem("fuji_data-theme","auto")</script><header><div class="container-lg clearfix"><div class="col-12 header"><a class=title-main href=https://blog.agramakov.me>technical_</a></div></div></header><main><div class="container-lg clearfix"><div class="col-12 col-md-9 float-left content"><article><h2 class="post-item post-title"><a href=https://blog.agramakov.me/posts/2020/06-25-out-of-memory-moving-to-rpi4/>Out of memory: moving to RPi4</a></h2><div class="post-item post-meta"><span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-06-25</span>
 <span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href=/tags/zakhar>zakhar</a>&nbsp;<a href=/tags/robotics>robotics</a>&nbsp;<a href=/tags/hackaday>hackaday</a>&nbsp;<a href=/tags/hardware>hardware</a>&nbsp;</span></div><div class="post-content markdown-body"><p>Ok, <a href=https://www.ros.org/ target=_blank>ROS</a> needs RAM.</p><p>Just received Raspberry Pi 4 B with 4 GB of RAM and finally I can continue implementation of <a href=https://hackaday.io/project/171888-zakhar-the-robot/log/179474-improved-ros-based-architecture-for-the-program-core target=_blank>this structure</a>. Stay tuned!</p><p><img class=img-zoomable src=2743011593107962568.jpg alt></p></div></article></div><aside class="col-12 col-md-3 float-left sidebar"><div class="sidebar-item sidebar-pages"><h3>Pages</h3><ul><li><a href=https://blog.agramakov.me>main page</a></li></ul></div><div class="sidebar-item sidebar-links"><h3>Links</h3><ul><li><a href=https://agramakov.me target=_blank><span>About me</span></a></li><li><a href=https://github.com/an-dr/blog_technical target=_blank><span>blog_technical@github</span></a></li><li><a href=https://zakhar.agramakov.me target=_blank><span>Zakhar on hackaday.io</span></a></li></ul></div><div class="sidebar-item sidebar-tags"><h3>Categories</h3><div><li><a href=https://blog.agramakov.me/categories/articles>articles</a></li><li><a href=https://blog.agramakov.me/categories/codding>codding</a></li><li><a href=https://blog.agramakov.me/categories/linux>linux</a></li><li><a href=https://blog.agramakov.me/categories/opencv>opencv</a></li><li><a href=https://blog.agramakov.me/categories/raspberry>raspberry</a></li><li><a href=https://blog.agramakov.me/categories/robotics>robotics</a></li><li><a href=https://blog.agramakov.me/categories/ros>ros</a></li><li><a href=https://blog.agramakov.me/categories/virtualization>virtualization</a></li><li><a href=https://blog.agramakov.me/categories/zakhar>zakhar</a></li></div></div><div class="sidebar-item sidebar-tags"><h3>Tags</h3><div><span><a href=/tags/articles/>articles</a></span>
 <span><a href=/tags/build/>build</a></span>
+<span><a href=/tags/canbus/>canbus</a></span>
 <span><a href=/tags/cpp/>cpp</a></span>
 <span><a href=/tags/eclipse/>eclipse</a></span>
 <span><a href=/tags/emotions/>emotions</a></span>
 <span><a href=/tags/hackaday/>hackaday</a></span>
 <span><a href=/tags/hardware/>hardware</a></span>
 <span><a href=/tags/howto/>howto</a></span>
+<span><a href=/tags/i2c/>i2c</a></span>
+<span><a href=/tags/interface/>interface</a></span>
 <span><a href=/tags/mechanics/>mechanics</a></span>
 <span><a href=/tags/opencv/>opencv</a></span>
+<span><a href=/tags/protocol/>protocol</a></span>
 <span><a href=/tags/raspberry/>raspberry</a></span>
 <span><a href=/tags/research/>research</a></span>
 <span><a href=/tags/robot/>robot</a></span>
@@ -20,14 +24,18 @@ Just received Raspberry Pi 4 B with 4 GB of RAM and finally I can continue imple
 <span><a href=/tags/visualstudio/>visualstudio</a></span>
 <span><a href=/tags/zakhar/>zakhar</a></span></div></div><div class="sidebar-item sidebar-toc"><h3>Table of Contents</h3><nav id=TableOfContents></nav></div></aside></div><div class=btn><div class=btn-menu id=btn-menu><i class="iconfont icon-grid-sharp"></i></div><div class=btn-toggle-mode><i class="iconfont icon-contrast-sharp"></i></div><div class=btn-scroll-top><i class="iconfont icon-chevron-up-circle-sharp"></i></div></div><aside class=sidebar-mobile style=display:none><div class=sidebar-wrapper><div class="sidebar-item sidebar-pages"><h3>Pages</h3><ul><li><a href=https://blog.agramakov.me>main page</a></li></ul></div><div class="sidebar-item sidebar-links"><h3>Links</h3><ul><li><a href=https://agramakov.me target=_blank><span>About me</span></a></li><li><a href=https://github.com/an-dr/blog_technical target=_blank><span>blog_technical@github</span></a></li><li><a href=https://zakhar.agramakov.me target=_blank><span>Zakhar on hackaday.io</span></a></li></ul></div><div class="sidebar-item sidebar-tags"><h3>Tags</h3><div><span><a href=/tags/articles/>articles</a></span>
 <span><a href=/tags/build/>build</a></span>
+<span><a href=/tags/canbus/>canbus</a></span>
 <span><a href=/tags/cpp/>cpp</a></span>
 <span><a href=/tags/eclipse/>eclipse</a></span>
 <span><a href=/tags/emotions/>emotions</a></span>
 <span><a href=/tags/hackaday/>hackaday</a></span>
 <span><a href=/tags/hardware/>hardware</a></span>
 <span><a href=/tags/howto/>howto</a></span>
+<span><a href=/tags/i2c/>i2c</a></span>
+<span><a href=/tags/interface/>interface</a></span>
 <span><a href=/tags/mechanics/>mechanics</a></span>
 <span><a href=/tags/opencv/>opencv</a></span>
+<span><a href=/tags/protocol/>protocol</a></span>
 <span><a href=/tags/raspberry/>raspberry</a></span>
 <span><a href=/tags/research/>research</a></span>
 <span><a href=/tags/robot/>robot</a></span>

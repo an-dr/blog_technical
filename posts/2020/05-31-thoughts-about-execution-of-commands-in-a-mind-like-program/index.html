@@ -6,14 +6,18 @@ The main program should use high-level commands or concept It is needed one more
 <span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href=/tags/zakhar>zakhar</a>&nbsp;<a href=/tags/robotics>robotics</a>&nbsp;<a href=/tags/hackaday>hackaday</a>&nbsp;<a href=/tags/hardware>hardware</a>&nbsp;</span></div><div class="post-content markdown-body"><p>I&rsquo;m trying to reverse engineer myself and apply it to the Zakhar. Some points:</p><ol><li>I can&rsquo;t send a direct order to, let say, my hand</li><li>I must form a concept, like &ldquo;fold fingers into a fist&rdquo; or &ldquo;move the hand up&rdquo;</li></ol><p>What that&rsquo;s mean for Zakhar:</p><ul><li>The main program should use high-level commands or concept</li><li>It is needed one more node translating these concepts into commands for devices</li></ul><p>Possible in-program interaction using terms of ROS and Zakhar should be like:</p><p><img class=img-zoomable src=3901601590956653230.jpg alt>
 The thoughts are related to: <a href=https://github.com/an-dr/zakharos_core target=_blank>https://github.com/an-dr/zakharos_core</a></p></div></article></div><aside class="col-12 col-md-3 float-left sidebar"><div class="sidebar-item sidebar-pages"><h3>Pages</h3><ul><li><a href=https://blog.agramakov.me>main page</a></li></ul></div><div class="sidebar-item sidebar-links"><h3>Links</h3><ul><li><a href=https://agramakov.me target=_blank><span>About me</span></a></li><li><a href=https://github.com/an-dr/blog_technical target=_blank><span>blog_technical@github</span></a></li><li><a href=https://zakhar.agramakov.me target=_blank><span>Zakhar on hackaday.io</span></a></li></ul></div><div class="sidebar-item sidebar-tags"><h3>Categories</h3><div><li><a href=https://blog.agramakov.me/categories/articles>articles</a></li><li><a href=https://blog.agramakov.me/categories/codding>codding</a></li><li><a href=https://blog.agramakov.me/categories/linux>linux</a></li><li><a href=https://blog.agramakov.me/categories/opencv>opencv</a></li><li><a href=https://blog.agramakov.me/categories/raspberry>raspberry</a></li><li><a href=https://blog.agramakov.me/categories/robotics>robotics</a></li><li><a href=https://blog.agramakov.me/categories/ros>ros</a></li><li><a href=https://blog.agramakov.me/categories/virtualization>virtualization</a></li><li><a href=https://blog.agramakov.me/categories/zakhar>zakhar</a></li></div></div><div class="sidebar-item sidebar-tags"><h3>Tags</h3><div><span><a href=/tags/articles/>articles</a></span>
 <span><a href=/tags/build/>build</a></span>
+<span><a href=/tags/canbus/>canbus</a></span>
 <span><a href=/tags/cpp/>cpp</a></span>
 <span><a href=/tags/eclipse/>eclipse</a></span>
 <span><a href=/tags/emotions/>emotions</a></span>
 <span><a href=/tags/hackaday/>hackaday</a></span>
 <span><a href=/tags/hardware/>hardware</a></span>
 <span><a href=/tags/howto/>howto</a></span>
+<span><a href=/tags/i2c/>i2c</a></span>
+<span><a href=/tags/interface/>interface</a></span>
 <span><a href=/tags/mechanics/>mechanics</a></span>
 <span><a href=/tags/opencv/>opencv</a></span>
+<span><a href=/tags/protocol/>protocol</a></span>
 <span><a href=/tags/raspberry/>raspberry</a></span>
 <span><a href=/tags/research/>research</a></span>
 <span><a href=/tags/robot/>robot</a></span>
@@ -23,14 +27,18 @@ The thoughts are related to: <a href=https://github.com/an-dr/zakharos_core targ
 <span><a href=/tags/visualstudio/>visualstudio</a></span>
 <span><a href=/tags/zakhar/>zakhar</a></span></div></div><div class="sidebar-item sidebar-toc"><h3>Table of Contents</h3><nav id=TableOfContents></nav></div></aside></div><div class=btn><div class=btn-menu id=btn-menu><i class="iconfont icon-grid-sharp"></i></div><div class=btn-toggle-mode><i class="iconfont icon-contrast-sharp"></i></div><div class=btn-scroll-top><i class="iconfont icon-chevron-up-circle-sharp"></i></div></div><aside class=sidebar-mobile style=display:none><div class=sidebar-wrapper><div class="sidebar-item sidebar-pages"><h3>Pages</h3><ul><li><a href=https://blog.agramakov.me>main page</a></li></ul></div><div class="sidebar-item sidebar-links"><h3>Links</h3><ul><li><a href=https://agramakov.me target=_blank><span>About me</span></a></li><li><a href=https://github.com/an-dr/blog_technical target=_blank><span>blog_technical@github</span></a></li><li><a href=https://zakhar.agramakov.me target=_blank><span>Zakhar on hackaday.io</span></a></li></ul></div><div class="sidebar-item sidebar-tags"><h3>Tags</h3><div><span><a href=/tags/articles/>articles</a></span>
 <span><a href=/tags/build/>build</a></span>
+<span><a href=/tags/canbus/>canbus</a></span>
 <span><a href=/tags/cpp/>cpp</a></span>
 <span><a href=/tags/eclipse/>eclipse</a></span>
 <span><a href=/tags/emotions/>emotions</a></span>
 <span><a href=/tags/hackaday/>hackaday</a></span>
 <span><a href=/tags/hardware/>hardware</a></span>
 <span><a href=/tags/howto/>howto</a></span>
+<span><a href=/tags/i2c/>i2c</a></span>
+<span><a href=/tags/interface/>interface</a></span>
 <span><a href=/tags/mechanics/>mechanics</a></span>
 <span><a href=/tags/opencv/>opencv</a></span>
+<span><a href=/tags/protocol/>protocol</a></span>
 <span><a href=/tags/raspberry/>raspberry</a></span>
 <span><a href=/tags/research/>research</a></span>
 <span><a href=/tags/robot/>robot</a></span>
