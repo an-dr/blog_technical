@@ -23,8 +23,9 @@ def run():
 
     # Create a directory for the post
     post_name_for_dir = re.sub('[^0-9a-zA-Z]+', '-', post_name).lower().strip("-")
-    date = f"{NOW.month:02d}-{NOW.day:02d}"
-    new_post_dir = POSTS_DIR / f"{date}-{post_name_for_dir}"
+    date_md = f"{NOW.month:02d}-{NOW.day:02d}"
+    date_ymd = f"{NOW.year:04d}-{NOW.month:02d}-{NOW.day:02d}"
+    new_post_dir = POSTS_DIR / f"{date_md}-{post_name_for_dir}"
     new_post_dir.mkdir(parents=True, exist_ok=True)
 
     # Create a post file
@@ -36,7 +37,7 @@ def run():
     content = content.replace("$TITLE", post_name)
     time = f"{NOW.hour:02d}:{NOW.minute:02d}:{NOW.second:02d}"
     zone = f"{get_timezone_shift():02d}"
-    content = content.replace("$TIMESTAMP", f"{date}T{time}+{zone}:00")
+    content = content.replace("$TIMESTAMP", f"{date_ymd}T{time}+{zone}:00")
     index_file.write_text(content)
 
 
