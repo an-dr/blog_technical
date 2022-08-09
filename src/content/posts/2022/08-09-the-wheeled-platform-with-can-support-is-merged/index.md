@@ -1,7 +1,7 @@
 ---
 title: The Wheeled Platform with CAN support is merged!
 date: 2022-08-09T19:45:42+01:00
-draft: true
+draft: false
 categories:
   # - articles
   # - codding
