@@ -25,6 +25,10 @@ thumbnail: 2.jpg
 
 ---
 
+
+![](2.jpg)
+
+
 Updated code for the Sensor Unit with qCAN support is merged and documented!
 
 - Source code: https://github.com/Zakhar-the-Robot/io_sensors
