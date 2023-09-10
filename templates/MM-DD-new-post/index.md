@@ -14,6 +14,7 @@ categories:
   # - zakhar
 tags:
 
+thumbnail:
 ---
 
 TEXT
